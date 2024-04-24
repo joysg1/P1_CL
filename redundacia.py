@@ -1,6 +1,8 @@
 
 import crcmod
 
+# Validar usabilidad con un polinomio menor 
+
 def crc_algorithm(message, generator):
     crc_func = crcmod.mkCrcFun(int(generator, 2), rev=False)
     crc = crc_func(message.encode())
@@ -15,3 +17,5 @@ if crc_algorithm(message, generator):
     print("El mensaje ha llegado sin errores.")
 else:
     print("El mensaje ha llegado con errores.")
+
+
