@@ -2,6 +2,7 @@
 import crcmod
 
 # Validar usabilidad con un polinomio menor 
+# Recordar instalar librerias asociadas en Windows
 
 def crc_algorithm(message, generator):
     crc_func = crcmod.mkCrcFun(int(generator, 2), rev=False)
